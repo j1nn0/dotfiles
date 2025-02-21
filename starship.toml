@@ -1,0 +1,47 @@
+﻿scan_timeout = 60
+
+[cmd_duration]
+style = "yellow"
+
+[directory]
+style = "cyan"
+
+[aws]
+disabled = true
+
+[dotnet]
+style = "blue"
+
+[git_branch]
+style = "purple"
+
+[git_state]
+style = "yellow"
+
+[git_status]
+style = "red"
+
+[hostname]
+ssh_only = false
+style = "green"
+format = "[$hostname]($style) in "
+
+[nodejs]
+style = "green"
+
+[package]
+style = "red"
+
+[time]
+disabled = false
+time_format = "%Y-%m-%d %T"
+format = "[$time]($style)"
+style = "yellow"
+
+[username]
+show_always = true
+style_user = "yellow"
+format = "[$user]($style) "
+
+[python]
+pyenv_version_name = true
