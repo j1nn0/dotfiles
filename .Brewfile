@@ -90,11 +90,6 @@ cask "the-unarchiver"
 cask "utm"
 cask "visual-studio-code"
 cask "zoom"
-mas "GarageBand", id: 682658836
-mas "iMovie", id: 408981434
-mas "Keynote", id: 409183694
-mas "Numbers", id: 409203825
-mas "Pages", id: 409201541
 mas "Xcode", id: 497799835
 vscode "alefragnani.bookmarks"
 vscode "amatiasq.sort-imports"
