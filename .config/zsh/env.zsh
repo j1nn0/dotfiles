@@ -6,10 +6,6 @@ export HISTFILE=~/.zsh_history
 export HISTSIZE=1000000
 export SAVEHIST=1000000
 
-# bat
-export BAT_PAGER=""
-export BAT_THEME="Coldark-Dark"
-
 # homebrew
 export HOMEBREW_CASK_OPTS="--appdir=~/Applications --fontdir=/Library/Fonts"
 export HOMEBREW_EDITOR="code"
