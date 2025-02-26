@@ -29,6 +29,9 @@ alias pip='pip3'
 alias rdstart='rdctl start --application.start-in-background'
 alias rdstop='rdctl shutdown'
 
+# tmux
+alias tmux='tmux attach-session || tmux'
+
 ## other
 alias history='history -iD'
 alias h='cd ~'
