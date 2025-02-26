@@ -6,9 +6,9 @@
 ###################################################################
 
 eval "$(sheldon source)"
-eval "$(starship init zsh)"
 eval "$(direnv hook zsh)"
 eval "$(mise activate zsh)"
+eval "$(starship init zsh)"
 
 if [[ $TERM_PROGRAM != "tmux" ]]; then
     fastfetch

@@ -1,14 +1,20 @@
+export LANG=ja_JP.UTF-8
+export EDITOR="code -w"
+
 # history
-export HISTSIZE=10000
+export HISTFILE=~/.zsh_history
+export HISTSIZE=1000000
 export SAVEHIST=1000000
 
 # bat
 export BAT_PAGER=""
 export BAT_THEME="Coldark-Dark"
 
-#export LSCOLORS=gxfxcxdxbxegexabagacad
+# homebrew
+export HOMEBREW_CASK_OPTS="--appdir=~/Applications --fontdir=/Library/Fonts"
 export HOMEBREW_EDITOR="code"
-export GREP_COLOR='1;33'
+
+export GREP_COLOR="1;33"
 export DOCKER_DEFAULT_PLATFORM=linux/amd64
 export LOCAL_HOST_IP=$(ifconfig en0 | grep inet | grep -v inet6 | sed -E "s/inet ([0-9]{1,3}.[0-9]{1,3}.[0-9].{1,3}.[0-9]{1,3}) .*$/\1/" | tr -d "\t")
 
