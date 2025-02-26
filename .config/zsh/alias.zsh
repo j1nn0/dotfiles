@@ -39,3 +39,5 @@ alias finder-kill='killall Finder'
 alias diff='diff -u --color'
 alias zshrc='code ~/.zshrc'
 alias ff='fastfetch'
+alias myip="curl -s https://ipinfo.io/json"
+alias sqlite="sqlite3"

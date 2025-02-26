@@ -1,0 +1,99 @@
+{
+  "[blade]": {
+    "editor.defaultFormatter": "shufo.vscode-blade-formatter"
+  },
+  "[dockerfile]": {
+    "editor.defaultFormatter": "ms-azuretools.vscode-docker"
+  },
+  "[dotenv]": {
+    "editor.defaultFormatter": "foxundermoon.shell-format"
+  },
+  "[ignore]": {
+    "editor.defaultFormatter": "foxundermoon.shell-format"
+  },
+  "[php]": {
+    "editor.defaultFormatter": "bmewburn.vscode-intelephense-client"
+  },
+  "[properties]": {
+    "editor.defaultFormatter": "foxundermoon.shell-format"
+  },
+  "[shellscript]": {
+    "editor.defaultFormatter": "foxundermoon.shell-format"
+  },
+  "auto-close-tag.activationOnLanguage": [
+    "xml",
+    //"php",
+    "blade",
+    "ejs",
+    "jinja",
+    //"javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    //"plaintext",
+    "markdown",
+    "vue",
+    "liquid",
+    "erb",
+    "lang-cfml",
+    "cfml",
+    "HTML (EEx)",
+    "HTML (Eex)",
+    "plist"
+  ],
+  "chat.commandCenter.enabled": false,
+  "editor.cursorBlinking": "phase",
+  "editor.cursorSmoothCaretAnimation": "explicit",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.fontFamily": "'UDEV Gothic 35NFLG', Menlo, Monaco, 'Courier New', monospace",
+  "editor.fontLigatures": true,
+  "editor.fontSize": 14,
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "editor.formatOnType": true,
+  "editor.guides.bracketPairs": "active",
+  "editor.minimap.enabled": false,
+  "editor.renderLineHighlight": "all",
+  "editor.renderLineHighlightOnlyWhenFocus": true,
+  "editor.showFoldingControls": "always",
+  "editor.wordSegmenterLocales": ["ja"],
+  "editor.wrappingIndent": "indent",
+  "emmet.excludeLanguages": ["markdown", "php"],
+  "explorer.compactFolders": false,
+  "files.associations": {
+    // shell-formatだとインデントが無くなるのでプレーンテキストにしておく
+    ".gitconfig*": "plaintext"
+  },
+  "files.autoGuessEncoding": true,
+  "files.candidateGuessEncodings": ["utf8", "shiftjis", "eucjp"],
+  "git-graph.date.format": "ISO Date & Time",
+  "git.allowNoVerifyCommit": true,
+  "git.autofetch": true,
+  "git.openRepositoryInParentFolders": "never",
+  "gitlens.views.repositories.showStashes": true,
+  "hediet.vscode-drawio.resizeImages": null,
+  "redhat.telemetry.enabled": true,
+  "scm.compactFolders": false,
+  "security.workspace.trust.untrustedFiles": "open",
+  "terminal.external.osxExec": "iTerm.app",
+  "terminal.integrated.cursorBlinking": true,
+  "terminal.integrated.fontFamily": "'UDEV Gothic 35NF', Menlo, Monaco, 'Courier New', monospace",
+  "todo-tree.general.tagGroups": {
+    "FIXME": ["FIXME", "FIXIT", "FIX"]
+  },
+  "todo-tree.general.tags": [
+    "BUG",
+    "HACK",
+    "FIXME",
+    "TODO",
+    "XXX",
+    "[ ]",
+    "[x]",
+    "UNDONE"
+  ],
+  "workbench.colorTheme": "IKKI VSCode Dark Theme",
+  "workbench.iconTheme": "catppuccin-frappe",
+  "workbench.layoutControl.enabled": false,
+  "workbench.productIconTheme": "fluent-icons",
+  "workbench.startupEditor": "none"
+}
