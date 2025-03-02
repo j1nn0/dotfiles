@@ -29,10 +29,9 @@ alias pip='pip3'
 alias rdstart='rdctl start --application.start-in-background'
 alias rdstop='rdctl shutdown'
 
-# tmux
-alias tmux='tmux attach-session || tmux'
-
 ## other
+alias tmux='tmux a -t 0 || tmux'
+alias zellij='zellij attach --index 0 --create'
 alias history='history -iD'
 alias h='cd ~'
 alias c='clear'
@@ -44,3 +43,5 @@ alias zshrc='code ~/.zshrc'
 alias ff='fastfetch'
 alias myip="curl -s https://ipinfo.io/json"
 alias sqlite="sqlite3"
+alias echo-path="echo \$PATH | tr ':' '\n'"
+alias brew-dump="brew bundle dump --global --force"

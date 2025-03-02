@@ -75,7 +75,7 @@
   "redhat.telemetry.enabled": true,
   "scm.compactFolders": false,
   "security.workspace.trust.untrustedFiles": "open",
-  "terminal.external.osxExec": "iTerm.app",
+  "terminal.external.osxExec": "Ghostty.app",
   "terminal.integrated.cursorBlinking": true,
   "terminal.integrated.fontFamily": "'UDEV Gothic 35NF', Menlo, Monaco, 'Courier New', monospace",
   "todo-tree.general.tagGroups": {
