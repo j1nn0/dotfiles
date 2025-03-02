@@ -12,7 +12,7 @@ export HOMEBREW_EDITOR="code"
 
 export GREP_COLOR="1;33"
 export DOCKER_DEFAULT_PLATFORM=linux/amd64
-export LOCAL_HOST_IP=$(ifconfig en0 | grep inet | grep -v inet6 | sed -E "s/inet ([0-9]{1,3}.[0-9]{1,3}.[0-9].{1,3}.[0-9]{1,3}) .*$/\1/" | tr -d "\t")
+#export LOCAL_HOST_IP=$(ifconfig en0 | grep inet | grep -v inet6 | sed -E "s/inet ([0-9]{1,3}.[0-9]{1,3}.[0-9].{1,3}.[0-9]{1,3}) .*$/\1/" | tr -d "\t")
 
 typeset -U path PATH
 export path=(
@@ -29,7 +29,7 @@ export path=(
     $(brew --prefix gnu-tar)/libexec/gnubin
     $(brew --prefix gnu-sed)/libexec/gnubin
     $(brew --prefix gawk)/libexec/gnubin
-    $(brew --prefix findutils)/libexec/gnubin
+    #$(brew --prefix findutils)/libexec/gnubin
     $path
 )
 typeset -U manpath MANPATH
@@ -38,7 +38,7 @@ export manpath=(
     $(brew --prefix gnu-tar)/libexec/gnuman
     $(brew --prefix gnu-sed)/libexec/gnuman
     $(brew --prefix gawk)/libexec/gnuman
-    $(brew --prefix findutils)/libexec/gnuman
+    #$(brew --prefix findutils)/libexec/gnuman
     /usr/share/man
     /usr/local/share/man
     $manpath

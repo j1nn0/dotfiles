@@ -1,5 +1,11 @@
 {
   "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+  "logo": {
+    "padding": {
+      "top": 1,
+      "left": 1
+    }
+  },
   "modules": [
     "title",
     "separator",
@@ -8,25 +14,50 @@
       "type": "host",
       "format": "{/2}{-}{/}{2}{?3} {3}{?}"
     },
-    "kernel",
     "uptime",
     {
+      "key": "Battery",
       "type": "battery",
-      "format": "{/4}{-}{/}{4}{?5} [{5}]{?}"
+      "temp": true
     },
     "break",
     "packages",
     "shell",
-    "display",
+    {
+      "type": "display",
+      "compactType": "original-with-refresh-rate"
+    },
     "terminal",
     "break",
-    "cpu",
     {
+      "type": "cpu",
+      "showPeCoreCount": true,
+      "temp": true
+    },
+    {
+      "key": "GPU",
       "type": "gpu",
-      "key": "GPU"
+      "driverSpecific": true,
+      "temp": true
     },
     "memory",
+    {
+      "key": "Disk",
+      "type": "disk",
+      "showReadOnly": true
+    },
     "break",
-    "colors"
+    "bluetooth",
+    {
+      "key": "Local IP",
+      "type": "localip",
+      "showPrefixLen": true
+    },
+    "publicip",
+    "break",
+    {
+      "type": "colors",
+      "symbol": "circle"
+    }
   ]
 }
