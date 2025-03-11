@@ -1,2 +1,4 @@
 [tools]
 node = "22.14.0"
+php = "latest"
+yarn = "1.22.22"

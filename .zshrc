@@ -6,15 +6,11 @@
 ###################################################################
 
 eval "$(sheldon source)"
-eval "$(direnv hook zsh)"
 eval "$(mise activate zsh)"
 eval "$(starship init zsh)"
 
-if [[ "$ZELLIJ" == "0" ]]; then
-    [[ "$ZELLIJ_PANE_ID" == "0" ]] && fastfetch
-elif [[ "$TERM_PROGRAM" == "tmux" ]]; then
+if [[ "$TERM_PROGRAM" == "tmux" ]]; then
     [[ "$TMUX_PANE" == "%0" ]] && fastfetch
 else
     fastfetch
-    #zellij
 fi
