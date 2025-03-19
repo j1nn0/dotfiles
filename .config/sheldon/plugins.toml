@@ -43,7 +43,30 @@ github = "zsh-users/zsh-autosuggestions"
 use = ['{{ name }}.zsh']
 apply = ["defer"]
 
-[plugins.ohmyzsh-lib]
+[plugins.ohmyzsh-lib-clipboard]
 github = "ohmyzsh/ohmyzsh"
 use = ['lib/clipboard.zsh']
+apply = ["defer"]
+
+[plugins.ohmyzsh-lib-functions]
+github = "ohmyzsh/ohmyzsh"
+use = ['lib/functions.zsh']
+apply = ["defer"]
+
+#[plugins.ohmyzsh-aws]
+#github = "ohmyzsh/ohmyzsh"
+#use = ['plugins/aws/aws.plugin.zsh']
+#apply = ["defer"]
+
+[plugins.ohmyzsh-web-search]
+github = "ohmyzsh/ohmyzsh"
+use = ['plugins/web-search/web-search.plugin.zsh']
+apply = ["defer"]
+
+[plugins.pwp]
+github = "ttkalcevic/pwp"
+apply = ["defer"]
+
+[plugins.replace-multiple-dots]
+github = "momo-lab/zsh-replace-multiple-dots"
 apply = ["defer"]

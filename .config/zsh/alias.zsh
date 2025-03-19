@@ -41,11 +41,12 @@ alias diff='diff -u --color'
 alias ff='fastfetch'
 alias myip="curl -s https://ipinfo.io/json"
 alias sqlite="sqlite3"
-alias echo-path="echo \$PATH | tr ':' '\n'"
+alias env-path="echo \$PATH | tr ':' '\n'"
 alias brew-dump="brew bundle dump --global --force"
 alias grep-ver='grep -o -E "([0-9]+\.){1}[0-9]+(\.[0-9]+)?$"'
 
-alias zprofile='code ~/.zprofile'
-alias zshrc='code ~/.zshrc'
-alias dotfiles='code ~/Repos/j1nn0.github/dotfiles/'
-alias dotconfig='code ~/.config'
+alias zprofile='code ${HOME}/.zprofile'
+alias zshrc='code ${HOME}/.zshrc'
+alias dotfiles='code ${HOME}/Repos/j1nn0.github/dotfiles/'
+alias dotconfig='code ${HOME}/.config/'
+alias hosts='bat /etc/hosts'

@@ -11,7 +11,7 @@ export HOMEBREW_CASK_OPTS="--appdir=~/Applications --fontdir=/Library/Fonts"
 export HOMEBREW_EDITOR="code"
 
 export GREP_COLOR="1;33"
-export DOCKER_DEFAULT_PLATFORM=linux/amd64
+#export DOCKER_DEFAULT_PLATFORM=linux/amd64
 #export LOCAL_HOST_IP=$(ifconfig en0 | grep inet | grep -v inet6 | sed -E "s/inet ([0-9]{1,3}.[0-9]{1,3}.[0-9].{1,3}.[0-9]{1,3}) .*$/\1/" | tr -d "\t")
 
 # mise-php
