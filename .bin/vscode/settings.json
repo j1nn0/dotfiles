@@ -20,6 +20,9 @@
   "[shellscript]": {
     "editor.defaultFormatter": "foxundermoon.shell-format"
   },
+  "[toml]": {
+    "editor.defaultFormatter": "tamasfe.even-better-toml"
+  },
   "auto-close-tag.activationOnLanguage": [
     "xml",
     //"php",
@@ -42,6 +45,9 @@
     "plist"
   ],
   "chat.commandCenter.enabled": false,
+  "debug.javascript.defaultRuntimeExecutable": {
+    "pwa-node": "~/.local/share/mise/shims/node"
+  },
   "editor.cursorBlinking": "phase",
   "editor.cursorSmoothCaretAnimation": "explicit",
   "editor.defaultFormatter": "esbenp.prettier-vscode",
@@ -70,14 +76,24 @@
   "git.allowNoVerifyCommit": true,
   "git.autofetch": true,
   "git.openRepositoryInParentFolders": "never",
+  "gitlens.views.repositories.showBranchComparison": false,
+  "gitlens.views.repositories.showBranches": false,
+  "gitlens.views.repositories.showCommits": false,
+  "gitlens.views.repositories.showContributors": false,
+  "gitlens.views.repositories.showRemotes": false,
   "gitlens.views.repositories.showStashes": true,
+  "gitlens.views.repositories.showTags": false,
+  "gitlens.views.repositories.showUpstreamStatus": false,
+  "gitlens.views.repositories.showWorktrees": false,
   "hediet.vscode-drawio.resizeImages": null,
+  "php.debug.executablePath": "~/.local/share/mise/shims/php",
   "redhat.telemetry.enabled": true,
   "scm.compactFolders": false,
   "security.workspace.trust.untrustedFiles": "open",
   "terminal.external.osxExec": "Ghostty.app",
   "terminal.integrated.cursorBlinking": true,
   "terminal.integrated.fontFamily": "'UDEV Gothic 35NF', Menlo, Monaco, 'Courier New', monospace",
+  "terminal.integrated.fontSize": 13,
   "todo-tree.general.tagGroups": {
     "FIXME": ["FIXME", "FIXIT", "FIX"]
   },
@@ -91,8 +107,8 @@
     "[x]",
     "UNDONE"
   ],
-  "workbench.colorTheme": "IKKI VSCode Dark Theme",
-  "workbench.iconTheme": "catppuccin-frappe",
+  "workbench.colorTheme": "Gruvbox Dark Soft",
+  "workbench.iconTheme": "gruvbox-material-icon-theme",
   "workbench.layoutControl.enabled": false,
   "workbench.productIconTheme": "fluent-icons",
   "workbench.startupEditor": "none"

@@ -38,6 +38,8 @@ github = "zsh-users/zsh-syntax-highlighting"
 use = ['{{ name }}.zsh']
 apply = ["defer"]
 
+# Amazon-Qを使用する場合は競合するため無効にする必要がある。
+# https://docs.aws.amazon.com/ja_jp/amazonq/latest/qdeveloper-ug/command-line-inline.html#command-line-inline-limits
 [plugins.zsh-autosuggestions]
 github = "zsh-users/zsh-autosuggestions"
 use = ['{{ name }}.zsh']
