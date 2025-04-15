@@ -1,4 +1,5 @@
 [tools]
+dotnet = "8.0.408"
 node = "22.14.0"
-php = "latest"
+php = "8.3.16"
 yarn = "1.22.22"
