@@ -53,7 +53,10 @@
       "type": "localip",
       "showPrefixLen": true
     },
-    "publicip",
+    {
+      "key": "Global IP",
+      "type": "publicip"
+    },
     "break",
     {
       "type": "colors",

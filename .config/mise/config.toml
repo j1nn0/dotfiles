@@ -1,5 +1,9 @@
 [tools]
-dotnet = "8.0.408"
-node = "22.14.0"
-php = "8.3.16"
+dotnet = "8"
+node = "22.19.0"
+"npm:@google/gemini-cli" = "latest"
+"npm:@vue/cli" = "latest"
+"npm:jfq" = "latest"
+php = "8.3.23"
+pnpm = "10.16.1"
 yarn = "1.22.22"

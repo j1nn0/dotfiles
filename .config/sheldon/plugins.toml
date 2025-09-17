@@ -21,13 +21,13 @@ defer = "{{ hooks?.pre | nl }}{% for file in files %}zsh-defer source \"{{ file 
 github = 'romkatv/zsh-defer'
 apply = ['source']
 
-[plugins.compinit]
-inline = "autoload -Uz compinit && zsh-defer compinit"
-
 [plugins.dotfiles-sync]
 local = "~/.config/zsh"
 use = ["{alias,func,env,opt,style}.zsh"]
 apply = ["source"]
+
+[plugins.compinit]
+inline = "autoload -Uz compinit && zsh-defer compinit -d ~/.zcompdump"
 
 [plugins.zsh-completions]
 github = "zsh-users/zsh-completions"
@@ -45,30 +45,42 @@ github = "zsh-users/zsh-autosuggestions"
 use = ['{{ name }}.zsh']
 apply = ["defer"]
 
+# https://github.com/ohmyzsh/ohmyzsh/blob/master/lib/clipboard.zsh
 [plugins.ohmyzsh-lib-clipboard]
 github = "ohmyzsh/ohmyzsh"
 use = ['lib/clipboard.zsh']
 apply = ["defer"]
 
+# https://github.com/ohmyzsh/ohmyzsh/blob/master/lib/functions.zsh
 [plugins.ohmyzsh-lib-functions]
 github = "ohmyzsh/ohmyzsh"
 use = ['lib/functions.zsh']
 apply = ["defer"]
 
-#[plugins.ohmyzsh-aws]
-#github = "ohmyzsh/ohmyzsh"
-#use = ['plugins/aws/aws.plugin.zsh']
-#apply = ["defer"]
-
+# https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/web-search
 [plugins.ohmyzsh-web-search]
 github = "ohmyzsh/ohmyzsh"
 use = ['plugins/web-search/web-search.plugin.zsh']
 apply = ["defer"]
 
+# https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/copypath
+[plugins.ohmyzsh-copypath]
+github = "ohmyzsh/ohmyzsh"
+use = ['plugins/copypath/copypath.plugin.zsh']
+apply = ["defer"]
+
+# https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/copyfile
+[plugins.ohmyzsh-copyfile]
+github = "ohmyzsh/ohmyzsh"
+use = ['plugins/copyfile/copyfile.plugin.zsh']
+apply = ["defer"]
+
+# https://github.com/ttkalcevic/pwp
 [plugins.pwp]
 github = "ttkalcevic/pwp"
 apply = ["defer"]
 
+# https://github.com/momo-lab/zsh-replace-multiple-dots
 [plugins.replace-multiple-dots]
 github = "momo-lab/zsh-replace-multiple-dots"
 apply = ["defer"]

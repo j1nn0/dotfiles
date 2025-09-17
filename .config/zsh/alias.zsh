@@ -1,5 +1,5 @@
 ## Modern Alternatives of Command-Line Tools
-alias ls='eza --icons --time-style=long-iso -g --header --git -o'
+alias ls='eza --icons -gho --time-style=long-iso --git --group-directories-first --color=always'
 alias du='dust'
 alias tree='eza --icons --tree'
 
@@ -29,8 +29,8 @@ alias rdstart='rdctl start --application.start-in-background'
 alias rdstop='rdctl shutdown'
 
 ## other
-alias tmux='tmux a -t 0 || tmux'
-alias zellij='zellij attach --index 0 --create'
+#alias tmux='tmux a -t 0 || tmux'
+#alias zellij='zellij attach --index 0 --create'
 alias history='history -iD'
 alias h='cd ~'
 alias c='clear'
@@ -43,10 +43,11 @@ alias myip="curl -s https://ipinfo.io/json"
 alias sqlite="sqlite3"
 alias env-path="echo \$PATH | tr ':' '\n'"
 alias brew-dump="brew bundle dump --global --force"
-alias grep-ver='grep -o -E "([0-9]+\.){1}[0-9]+(\.[0-9]+)?$"'
+alias grep='grep --color=always'
+alias grep-ver='\grep -o -E "([0-9]+\.){1}[0-9]+(\.[0-9]+)?$"'
 
-alias zprofile='code ${HOME}/.zprofile'
-alias zshrc='code ${HOME}/.zshrc'
+alias zprofile='code ${ZDOTDIR}/.zprofile'
+alias zshrc='code ${ZDOTDIR}/.zshrc'
 alias dotfiles='code ${HOME}/Repos/j1nn0.github/dotfiles/'
-alias dotconfig='code ${HOME}/.config/'
+alias dotconfig='code ${XDG_CONFIG_HOME}'
 alias hosts='bat /etc/hosts'

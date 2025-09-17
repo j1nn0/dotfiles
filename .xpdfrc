@@ -5,5 +5,5 @@ unicodeMap	EUC-JP		/usr/local/share/xpdf/japanese/EUC-JP.unicodeMap
 unicodeMap	Shift-JIS	/usr/local/share/xpdf/japanese/Shift-JIS.unicodeMap
 cMapDir		Adobe-Japan1	/usr/local/share/xpdf/japanese/CMap
 toUnicodeDir			/usr/local/share/xpdf/japanese/CMap
-fontFileCC	Adobe-Japan1	/Library/Fonts/NotoSansCJKjp-Regular.otf
+#fontFileCC	Adobe-Japan1	/Library/Fonts/NotoSansCJKjp-Regular.otf
 #----- end Japanese support package
