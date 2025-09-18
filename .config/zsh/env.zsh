@@ -17,8 +17,17 @@ export GREP_COLOR="1;33"
 # 依存パッケージ：brew install libsodium gpg git tmux neovim htop curl wget re2c bison zlib libgd libiconv oniguruma bzip2 readline libedit tidy-html5 openssl libzip libxml2 pkgconf autoconf libpq argon2
 export PHP_CONFIGURE_OPTIONS="--with-zlib-dir=$(brew --prefix zlib) --with-bz2=$(brew --prefix bzip2) --with-readline=$(brew --prefix readline) --with-libedit=$(brew --prefix libedit) --with-tidy=$(brew --prefix tidy-html5) --with-iconv=$(brew --prefix libiconv) --with-openssl=$(brew --prefix openssl@3.0) --with-curl=$(brew --prefix curl) --with-password-argon2=$(brew --prefix argon2)"
 
+# Gemini
 #export GEMINI_API_KEY=""
 
+# zsh-syntax-highlighting
+typeset -A ZSH_HIGHLIGHT_STYLES
+ZSH_HIGHLIGHT_STYLES[alias]='fg=#a6d189'
+ZSH_HIGHLIGHT_STYLES[builtin]='fg=#a6d189'
+ZSH_HIGHLIGHT_STYLES[command]='fg=#a6d189'
+ZSH_HIGHLIGHT_STYLES[function]='fg=#a6d189'
+
+# PATH
 typeset -U path PATH
 export path=(
     $HOME/.rd/bin
