@@ -5,5 +5,5 @@ eval "$(starship init zsh)"
 fastfetch
 
 if [[ "$TERM_PROGRAM" == "ghostty" ]]; then
-    brew update && brew outdated
+    "$XDG_CONFIG_HOME/zsh/brew-update.sh"
 fi
