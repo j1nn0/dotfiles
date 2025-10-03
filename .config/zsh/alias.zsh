@@ -1,7 +1,7 @@
 ## Modern Alternatives of Command-Line Tools
 alias ls='eza --icons -gho --time-style=long-iso --git --group-directories-first --color=always'
 alias du='dust'
-alias tree='eza --icons --tree'
+alias eza-tree='eza --icons --tree --git-ignore'
 
 ## ls
 alias ll='ls -l'
