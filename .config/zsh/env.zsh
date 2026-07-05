@@ -1,5 +1,6 @@
 export LANG=ja_JP.UTF-8
-export EDITOR="code -w"
+export EDITOR="zed -w"
+export GIT_EDITOR="zed -w"
 
 # history
 #export HISTFILE=~/.zsh_history
@@ -14,11 +15,27 @@ export GREP_COLOR="1;33"
 #export LOCAL_HOST_IP=$(ifconfig en0 | grep inet | grep -v inet6 | sed -E "s/inet ([0-9]{1,3}.[0-9]{1,3}.[0-9].{1,3}.[0-9]{1,3}) .*$/\1/" | tr -d "\t")
 
 # mise-php
-# 依存パッケージ：brew install libsodium gpg git tmux neovim htop curl wget re2c bison zlib libgd libiconv oniguruma bzip2 readline libedit tidy-html5 openssl libzip libxml2 pkgconf autoconf libpq argon2
-export PHP_CONFIGURE_OPTIONS="--with-zlib-dir=$(brew --prefix zlib) --with-bz2=$(brew --prefix bzip2) --with-readline=$(brew --prefix readline) --with-libedit=$(brew --prefix libedit) --with-tidy=$(brew --prefix tidy-html5) --with-iconv=$(brew --prefix libiconv) --with-openssl=$(brew --prefix openssl@3.0) --with-curl=$(brew --prefix curl) --with-password-argon2=$(brew --prefix argon2)"
-
-# Gemini
-#export GEMINI_API_KEY=""
+# 依存パッケージ：brew install argon2 autoconf bison bzip2 curl git gpg htop libgd libiconv libpq libxml2 libzip libsodium neovim oniguruma openssl pkgconf readline re2c tidy-html5 tmux wget zlib icu4c
+export PHP_CONFIGURE_OPTIONS="
+--with-zlib=$(brew --prefix zlib)
+--with-bz2=$(brew --prefix bzip2)
+--with-readline=$(brew --prefix readline)
+--with-tidy=$(brew --prefix tidy-html5)
+--with-iconv=$(brew --prefix libiconv)
+--with-openssl=$(brew --prefix openssl@3)
+--with-curl=$(brew --prefix curl)
+--with-password-argon2=$(brew --prefix argon2)
+--with-sodium=$(brew --prefix libsodium)
+--with-zip
+--enable-intl
+--enable-gd
+--with-freetype
+--with-jpeg
+--with-webp
+--with-mysqli=mysqlnd
+--with-pdo-mysql=mysqlnd
+"
+export PKG_CONFIG_PATH="$(brew --prefix icu4c)/lib/pkgconfig:$(brew --prefix libzip)/lib/pkgconfig:$PKG_CONFIG_PATH"
 
 # zsh-syntax-highlighting
 typeset -A ZSH_HIGHLIGHT_STYLES
@@ -30,36 +47,33 @@ ZSH_HIGHLIGHT_STYLES[function]='fg=#a6d189'
 # PATH
 typeset -U path PATH
 export path=(
+    $HOME/.local/bin
+    $HOME/.uv-tools/.venv/bin
     $HOME/.rd/bin
+    $HOME/.cargo/bin
     # mise-php依存
     $(brew --prefix bison)/bin
     $(brew --prefix icu4c)/bin
     $(brew --prefix icu4c)/sbin
     # brewコマンドを優先
-    $(brew --prefix mysql-client@8.0)/bin
+    #$(brew --prefix mysql-client@8.0)/bin
     $(brew --prefix openssl@3.0)/bin
     $(brew --prefix zip)/bin
     $(brew --prefix unzip)/bin
     $(brew --prefix curl)/bin
     $(brew --prefix gzip)/bin
-    # Unix(BSD)コマンドよりLinux(GNU)コマンドを優先
-    # https://qiita.com/kkdd/items/e9c8b46a89dea7862661
-    # https://qiita.com/eumesy/items/3bb39fc783c8d4863c5f
-    #$(brew --prefix grep)/libexec/gnubin
-    #$(brew --prefix gnu-tar)/libexec/gnubin
-    #$(brew --prefix gnu-sed)/libexec/gnubin
-    #$(brew --prefix gawk)/libexec/gnubin
-    #$(brew --prefix findutils)/libexec/gnubin
     $path
 )
 typeset -U manpath MANPATH
 export manpath=(
-    #$(brew --prefix grep)/libexec/gnuman
-    #$(brew --prefix gnu-tar)/libexec/gnuman
-    #$(brew --prefix gnu-sed)/libexec/gnuman
-    #$(brew --prefix gawk)/libexec/gnuman
-    #$(brew --prefix findutils)/libexec/gnuman
     /usr/share/man
     /usr/local/share/man
     $manpath
 )
+
+# AI
+export CONTEXT7_API_KEY=""
+export OPENCODE_EXPERIMENTAL_BACKGROUND_SUBAGENTS=true
+export SERENA_HOME="$XDG_CONFIG_HOME/serena"
+
+export DRAW_POKER_DATA_DIR="$XDG_DATA_HOME/draw-poker"

@@ -84,3 +84,6 @@ apply = ["defer"]
 [plugins.replace-multiple-dots]
 github = "momo-lab/zsh-replace-multiple-dots"
 apply = ["defer"]
+
+[plugins.broot]
+inline = "zsh-defer source ~/.config/broot/launcher/bash/br"

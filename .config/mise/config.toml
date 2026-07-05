@@ -1,9 +1,36 @@
 [tools]
-dotnet = "8"
-node = "22.19.0"
-"npm:@google/gemini-cli" = "latest"
-"npm:@vue/cli" = "latest"
-"npm:jfq" = "latest"
-php = "8.3.23"
-pnpm = "10.16.1"
-yarn = "1.22.22"
+"github:can1357/oh-my-pi" = "latest"
+node = "24"
+"npm:@antfu/ni" = "latest"
+"npm:@ast-grep/cli" = { version = "latest", npm_args = "--ignore-scripts=false" }
+"npm:@colbymchenry/codegraph" = "latest"
+"npm:@devcontainers/cli" = "latest"
+"npm:@frehilm/ordna-cli" = "latest"
+"npm:@openai/codex" = "latest"
+"npm:@playwright/cli" = "latest"
+"npm:agent-browser" = { version = "latest", npm_args = "--ignore-scripts=false" }
+"npm:aicommit2" = "latest"
+"npm:backlog.md" = "latest"
+"npm:bun" = "latest"
+"npm:ccusage" = "latest"
+"npm:codeburn" = "latest"
+"npm:context-mode" = { version = "latest", npm_args = "--ignore-scripts=false" }
+"npm:defuddle" = "latest"
+"npm:difit" = "latest"
+"npm:intelephense" = "latest"
+"npm:opencode-ai" = { version = "latest", npm_args = "--ignore-scripts=false" }
+"npm:oxfmt" = "latest"
+"npm:oxlint" = "latest"
+"npm:skills" = "latest"
+"npm:tokscale" = "latest"
+php = "8.3.31"
+pnpm = "10"
+yarn = "1"
+
+[settings]
+experimental = true
+npm.package_manager = "npm"
+minimum_release_age = "0s"
+
+#[hooks]
+#postinstall = ["~/.config/mise/scripts/postinstall.sh"]

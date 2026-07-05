@@ -1,0 +1,59 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "plugin": [
+    "./plugins/cmux-session.js",
+    "context-mode",
+    "oh-my-opencode-slim"
+  ],
+  "experimental": {
+    "disable_paste_summary": true
+  },
+  "agent": {
+    "ask": {
+      "mode": "primary",
+      "tools": {
+        "*": false,
+        "read": true,
+        "grep": true,
+        "glob": true,
+        "ls": true,
+        "bash": true
+      },
+      "prompt": "質問回答・調査・コード読解・git差分確認のみを行う。bashは git status、git diff、git diff --cached、git log などの読み取り用途に限定する。ファイル変更、削除、インストール、git commit、git push、rm、mv、cp、sed -i など状態変更を伴うコマンドは禁止。",
+      "model": "opencode-go/deepseek-v4-flash"
+    },
+    "explore": {
+      "disable": true
+    },
+    "general": {
+      "disable": true
+    }
+  },
+  "lsp": true,
+  "formatter": {
+    "oxfmt": {
+      "command": [
+        "oxfmt",
+        "$FILE"
+      ],
+      "extensions": [
+        ".js",
+        ".jsx",
+        ".mjs",
+        ".cjs",
+        ".ts",
+        ".tsx",
+        ".mts",
+        ".cts",
+        ".vue",
+        ".json",
+        ".jsonc",
+        ".yaml",
+        ".yml",
+        ".toml",
+        ".css",
+        ".scss"
+      ]
+    }
+  }
+}

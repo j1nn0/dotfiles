@@ -8,8 +8,13 @@
   },
   "modules": [
     "title",
+    {
+      "key": "Date Time",
+      "type": "datetime"
+    },
     "separator",
     "os",
+    "kernel",
     {
       "type": "host",
       "format": "{/2}{-}{/}{2}{?3} {3}{?}"
@@ -23,10 +28,10 @@
     "break",
     "packages",
     "shell",
-    {
+    /*
       "type": "display",
       "compactType": "original-with-refresh-rate"
-    },
+    },*/
     "terminal",
     "break",
     {

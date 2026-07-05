@@ -1,0 +1,13 @@
+defaultThinkingLevel: auto
+disabledProviders: 
+  - amazon-bedrock
+  - llama.cpp
+  - lm-studio
+  - ollama
+memories: 
+  enabled: true
+memory: 
+  backend: local
+modelRoles: 
+  default: opencode-zen/deepseek-v4-flash-free
+setupVersion: 1

@@ -141,7 +141,8 @@ ignore_base = false
 
 [time]
 disabled = false
-time_format = "%R"
+#time_format = "%R"
+time_format = "%Y-%m-%d %R"
 style = "bg:lavender"
 format = '[[  $time ](fg:crust bg:lavender)]($style)'
 
@@ -162,7 +163,7 @@ show_milliseconds = true
 format = " in $duration "
 style = "bg:lavender"
 disabled = false
-show_notifications = true
+show_notifications = false
 min_time_to_notify = 45000
 
 [palettes.catppuccin_mocha]
